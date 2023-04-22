@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA ADIVINACION DE NUMEROS 2</h1>
+<script>
+//Para este script condicionamos el numero de intentos que el usuario puede hacer
+    function saltarLinea() {
+        document.write("<br><br><br>");
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    var numPensado = Math.round(Math.random()*10); 
+    var intentos = 3;
+    var contador = 1;
+    while(contador <= intentos){
+         var numRecibido = parseInt(prompt("Ingrese un numero entre 0-10"));
+         if(numPensado==numRecibido){
+            alert("Usted ha adivinado el numero pensado: " + numPensado + " intento: "+ contador);
+            break;
+         }else{
+          alert("Usted NO ha adivinado, el numero pensado era: "+numPensado);
+         }
+       contador++;
+    }
+     
+    
+    
+</script>

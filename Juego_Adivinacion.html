@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA ADIVINACION DE NUMEROS</h1>
+
+<script>
+//Programa que recibe un numero desde teclado y lo compara con un numero random preestablecido
+    function saltarLinea() {
+        document.write("<br><br><br>");
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    var numPensado = Math.round(Math.random()*10); //Numero random que definimos por default
+    //numero tecleado
+    var numRecibido = parseInt(prompt("Ingrese un numero entre 0-10")); 
+    if(numRecibido==numPensado){
+      imprimir("Usted ha adivinado el numero pensado");
+      imprimir("Los numeros son: <br>Pensado: "+ numPensado + "<br> Numero que digitó: "+numRecibido);
+    }else{
+      imprimir("Usted NO ha adivinado el numero pensado");
+      imprimir("Los numeros son: Pensado: "+ numPensado + "<br> Numero que digitó: "+numRecibido);
+    }
+    //var numero = Math.round(Math.random()*200);
+    //imprimir("numero aleatorio"+numero);
+
+   imprimir("<hr>")
+    //creando funcion de loteria, esta funcion trabaja y recibe el mismo numero que ya ha sido tecleado
+    function loteria(n){
+      var numSorteado = Math.round(Math.random()*n);
+      if(n==numSorteado){
+      imprimir("Usted ha adivinado el numero pensado");
+      imprimir("Los numeros son: <br>Pensado: "+ numSorteado + "<br> Numero que digitó: "+n);
+      }else{
+      imprimir("Usted NO ha adivinado el numero pensado");
+      imprimir("Los numeros son: Pensado: "+ numSorteado + "<br> Numero que digitó: "+n);
+      }
+    }
+    loteria(numRecibido);
+    
+</script>
+

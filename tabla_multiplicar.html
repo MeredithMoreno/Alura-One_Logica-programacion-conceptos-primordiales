@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<h1>TABLAS DE MULTIPLICAR</h1>
+
+<script>
+     function saltarLinea() {
+        document.write("<br><br>");
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    var multiplicando = parseInt(prompt("Ingresa el numero a multiplicar"));
+    var limite = parseInt(prompt("Ingresa el numero limite de multiplicandos"));
+    //ciclo que se repite mientras la condicion se cumpla, con paso de incremento en 1 y mostrando el producto de cada multiplicacion
+    for (var multiplicador=1; multiplicador<=limite; multiplicador++){
+        imprimir(multiplicando + " x " + multiplicador + " = "+(multiplicador*multiplicando));
+    }
+
+</script>

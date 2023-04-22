@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA QUE MUESTRA LOS AÑOS DEL MUNDIAL FIFA</h1>
+
+<script>
+     function saltarLinea() {
+        document.write("<br><br><br>");
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    var anioMundial=1930;
+    var anioFin = parseInt(prompt("Ingresa el numero el año limite a mostrar"));
+    //ciclo que se repite mientras la condicion se cumpla, con paso de incremento en 4 y mostrando la alerta del resultado
+    while(anioMundial<=anioFin){
+      imprimir("Hubo mundial de la FIFA en el año: "+ anioMundial);
+      anioMundial=anioMundial+4;
+    }
+
+</script>

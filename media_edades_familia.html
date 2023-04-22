@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<h1>CALCULAR EDADES DE UNA FAMILIA</h1>
+
+<script>
+     function saltarLinea() {
+        document.write("<br><br>");
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    var i=1;
+    var totalEdad = 0;
+    var miembros = parseInt(prompt("Ingresa el numero de miebros de la famila"));
+    while(i <= miembros){
+        edad = parseInt(prompt("Ingresa la edad del familiar"));
+        totalEdad = totalEdad + edad;
+        i++;
+    }
+    var mediaEdad = totalEdad/miembros;
+    imprimir ("La media de las edades de los familiares es: "+ mediaEdad);
+
+</script>
